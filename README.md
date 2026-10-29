@@ -29,8 +29,6 @@ Dataset1 and Dataset2 use trapezoidal APFDc. Dataset3 uses APFD with unit evalua
 
 BaS-TCP uses `k = ceil(d/2)`, `l = min(10,k,rank(X-mean(X)))`, `alpha = 0.75`, and `eta = beta = 1`. `default_config.m` defines this rule. `baseline_config.m` defines the baseline settings, including RL-static's `H = 2d` and five-fold cross-fitting. GA-TCP and MO-TCP use a population of 100 and 4,000 generations. SPECTRE*, RL-static*, and LEAST-static* denote the implemented adaptations.
 
-Effectiveness uses seed 0 and a two-thread numerical limit for BaS-TCP. Stochastic baselines use seeds 1–30 and a four-thread limit. The ordering component comparison uses a two-thread limit, and the alternative representation runs use four threads. Timing is measured separately with a four-thread limit, one warmup, and 15 sequential repetitions in alternating method order. The timing and effectiveness numerical settings are separate.
-
 The representation settings are PCA with five components, UMAP with 10 neighbors, 50 epochs, minimum distance 0.1 and four output dimensions, LLE with 12 neighbors and regularization 1000, and the VAE and ISA settings in `run_components.m`.
 
 ## Summarize the saved experiments
